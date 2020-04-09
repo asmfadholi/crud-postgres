@@ -33,6 +33,15 @@ app.get('/todos', async (req, res) => {
     }
 })
 
+app.get('/test', async (req, res) => {
+    try {
+        res.json({ success: true })
+        // pool.end();
+    } catch(err) {
+        console.log(err)
+    }
+})
+
 app.get('/todos/:id', async (req, res) => {
     try {
         const {id} = req.params
